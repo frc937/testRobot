@@ -4,11 +4,23 @@
 
 package frc.subsystems;
 
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+
+import edu.wpi.first.wpilibj.drive.MecanumDrive;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Drive extends SubsystemBase {
 
+    /* variables */
+    WPI_TalonSRX frontLeft;
+    WPI_TalonSRX backLeft;
+    WPI_TalonSRX frontRight;
+    WPI_TalonSRX backRight;
+
+    MecanumDrive mecanumDrive;
+    
     public Drive() {
+        mecanumDrive = new MecanumDrive(frontLeft, backLeft, frontRight, backRight);
     }
 
     @Override
