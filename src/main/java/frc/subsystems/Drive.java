@@ -21,6 +21,13 @@ public class Drive extends SubsystemBase {
     MecanumDrive mecanumDrive;
     
     public Drive() {
+        /* innitialize drive motor controllers */
+        frontLeft = new WPI_TalonSRX(0);
+        backLeft = new WPI_TalonSRX(0);
+        frontRight = new WPI_TalonSRX(0);
+        backRight = new WPI_TalonSRX(0);
+
+
         /* set default drive configs  */
         frontLeft.setInverted(false);
         backLeft.setInverted(false);
