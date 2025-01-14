@@ -4,6 +4,7 @@
 
 package frc.subsystems;
 
+import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 import edu.wpi.first.wpilibj.drive.MecanumDrive;
@@ -20,6 +21,18 @@ public class Drive extends SubsystemBase {
     MecanumDrive mecanumDrive;
     
     public Drive() {
+        /* set default drive configs  */
+        frontLeft.setInverted(false);
+        backLeft.setInverted(false);
+        frontRight.setInverted(true);
+        backRight.setInverted(true);
+
+        frontLeft.setNeutralMode(NeutralMode.Brake);
+        backLeft.setNeutralMode(NeutralMode.Brake);
+        frontRight.setNeutralMode(NeutralMode.Brake);
+        backRight.setNeutralMode(NeutralMode.Brake);
+
+        /* innitialize a mecanum drivetrain */
         mecanumDrive = new MecanumDrive(frontLeft, backLeft, frontRight, backRight);
     }
 
