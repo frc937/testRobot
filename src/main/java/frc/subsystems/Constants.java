@@ -8,8 +8,8 @@ package frc.subsystems;
 public final class Constants {
 
     /* Drive motor can IDs */
-    public static final int ID_TALON_FRONT_LEFT = 0;
-    public static final int ID_TALON_FRONT_RIGHT = 0;
-    public static final int ID_TALON_BACK_LEFT = 0;
-    public static final int ID_TALON_BACK_RIGHT = 0;
+    public static final int ID_TALON_FRONT_LEFT = 2;
+    public static final int ID_TALON_FRONT_RIGHT = 4;
+    public static final int ID_TALON_BACK_LEFT = 1;
+    public static final int ID_TALON_BACK_RIGHT = 3;
 }
