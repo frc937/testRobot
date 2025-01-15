@@ -22,10 +22,10 @@ public class Drive extends SubsystemBase {
     
     public Drive() {
         /* innitialize drive motor controllers */
-        frontLeft = new WPI_TalonSRX(0);
-        backLeft = new WPI_TalonSRX(0);
-        frontRight = new WPI_TalonSRX(0);
-        backRight = new WPI_TalonSRX(0);
+        frontLeft = new WPI_TalonSRX(Constants.ID_TALON_FRONT_LEFT);
+        backLeft = new WPI_TalonSRX(Constants.ID_TALON_BACK_LEFT);
+        frontRight = new WPI_TalonSRX(Constants.ID_TALON_FRONT_RIGHT);
+        backRight = new WPI_TalonSRX(Constants.ID_TALON_BACK_RIGHT);
 
 
         /* set default drive configs  */
