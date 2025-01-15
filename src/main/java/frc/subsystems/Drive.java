@@ -47,6 +47,13 @@ public class Drive extends SubsystemBase {
         mecanumDrive.driveCartesian(x, y, z);
     }
 
+    public void stop() {
+        frontLeft.stopMotor();
+        backLeft.stopMotor();
+        frontRight.stopMotor();
+        backRight.stopMotor();
+    }
+
     @Override
     public void periodic() {
         // This method will be called once per scheduler run
