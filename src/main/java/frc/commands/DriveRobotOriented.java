@@ -5,6 +5,7 @@
 package frc.commands;
 
 import edu.wpi.first.wpilibj2.command.Command;
+import frc.robot.RobotContainer;
 import frc.subsystems.Drive;
 
 /* You should consider using the more terse Command factories API instead https://docs.wpilib.org/en/stable/docs/software/commandbased/organizing-command-based.html#defining-commands */
@@ -12,6 +13,7 @@ public class DriveRobotOriented extends Command {
 
   /* variables */
   private final Drive drivetrain;
+  private double mecanumX, mecanumY, mecanumZ;
 
   public DriveRobotOriented(Drive driveSubsystem) {
     // Use addRequirements() here to declare subsystem dependencies.
@@ -25,11 +27,18 @@ public class DriveRobotOriented extends Command {
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
-  public void execute() {}
+  public void execute() {
+    mecanumX = RobotContainer.getScaledLeftJoystickXAxis();
+    mecanumY = RobotContainer.getScaledLeftJoystickYAxis();
+    mecanumZ = RobotContainer.getScaledRightJoystickXAxis();
+    drivetrain.moveMecanum(mecanumX, mecanumY, mecanumZ);
+  }
 
   // Called once the command ends or is interrupted.
   @Override
-  public void end(boolean interrupted) {}
+  public void end(boolean interrupted) {
+    drivetrain.stop();
+  }
 
   // Returns true when the command should end.
   @Override
