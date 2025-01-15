@@ -27,8 +27,8 @@ public class RobotContainer {
     }
 
     private void configureBindings() {
-        JoystickButton leftStick = new JoystickButton(controller, Constants.LEFTSTICK_NUMBER);
-        JoystickButton rightStick = new JoystickButton(controller, Constants.RIGHTSTICK_NUMBER);
+        // JoystickButton leftStick = new JoystickButton(controller, Constants.LEFTSTICK_NUMBER);
+        // JoystickButton rightStick = new JoystickButton(controller, Constants.RIGHTSTICK_NUMBER);
     }
 
     public Command getAutonomousCommand() {
