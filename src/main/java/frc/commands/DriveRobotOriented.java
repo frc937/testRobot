@@ -5,12 +5,18 @@
 package frc.commands;
 
 import edu.wpi.first.wpilibj2.command.Command;
+import frc.subsystems.Drive;
 
 /* You should consider using the more terse Command factories API instead https://docs.wpilib.org/en/stable/docs/software/commandbased/organizing-command-based.html#defining-commands */
 public class DriveRobotOriented extends Command {
-  /** Creates a new DriveRobotOriented. */
-  public DriveRobotOriented() {
+
+  /* variables */
+  private final Drive drivetrain;
+
+  public DriveRobotOriented(Drive driveSubsystem) {
     // Use addRequirements() here to declare subsystem dependencies.
+    drivetrain = driveSubsystem;
+    addRequirements(driveSubsystem);
   }
 
   // Called when the command is initially scheduled.
