@@ -7,6 +7,7 @@ package frc.robot;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Commands;
+import frc.Constants;
 import frc.commands.DriveRobotOriented;
 import frc.subsystems.Drive;
 
@@ -16,7 +17,7 @@ public class RobotContainer {
 
     private final DriveRobotOriented driveRO = new DriveRobotOriented(driveSubsystem);
 
-    public static XboxController controller = new XboxController(0);
+    public static XboxController controller = new XboxController(Constants.CONTROLLER_ID);
 
     public RobotContainer() {
         configureBindings();
