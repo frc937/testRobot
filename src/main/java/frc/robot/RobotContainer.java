@@ -14,12 +14,14 @@ public class RobotContainer {
     /* Robot's subsystems and commands are declared here */
     private final Drive driveSubsystem = new Drive();
 
-    private final DriveRobotOriented driveRO = new DriveRobotOriented();
+    private final DriveRobotOriented driveRO = new DriveRobotOriented(driveSubsystem);
 
     public static XboxController controller = new XboxController(0);
 
     public RobotContainer() {
         configureBindings();
+
+        driveSubsystem.setDefaultCommand(driveRO);
     }
 
     private void configureBindings() {
