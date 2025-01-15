@@ -36,11 +36,27 @@ public class RobotContainer {
         return controller.getLeftX();
     }
 
+    public static double getScaledLeftJoystickXAxis() {
+        return scaleAxis(getLeftJoystickXAxis());
+    }
+
     public static double getLeftJoystickYAxis() {
         return controller.getLeftY() * -1.0;    // reverse left joystick Y output, i guess we did this because the bot was going the wrong wasy ¯\_(ツ)_/¯
     }
 
+    public static double getScaledLeftJoystickYAxis() {
+        return scaleAxis(getLeftJoystickYAxis());
+    }
+
     public static double getRightJoystickXAxis() {
         return controller.getRightX();
+    }
+
+    public static double getScaledRightJoystickXAxis() {
+        return scaleAxis(getRightJoystickXAxis());
+    }
+
+    private static double scaleAxis(double axis) {
+        return Math.signum(axis) * Math.pow(axis, 2);
     }
 }
