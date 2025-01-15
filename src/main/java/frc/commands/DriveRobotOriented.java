@@ -28,8 +28,8 @@ public class DriveRobotOriented extends Command {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    mecanumX = RobotContainer.getScaledLeftJoystickXAxis();
-    mecanumY = RobotContainer.getScaledLeftJoystickYAxis();
+    mecanumX = RobotContainer.getScaledLeftJoystickYAxis();
+    mecanumY = RobotContainer.getScaledLeftJoystickXAxis();
     mecanumZ = RobotContainer.getScaledRightJoystickXAxis();
     drivetrain.moveMecanum(mecanumX, mecanumY, mecanumZ);
   }

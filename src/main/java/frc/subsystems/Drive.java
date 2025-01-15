@@ -30,10 +30,10 @@ public class Drive extends SubsystemBase {
 
 
         /* set default drive configs  */
-        frontLeft.setInverted(false);
-        backLeft.setInverted(false);
-        frontRight.setInverted(true);
-        backRight.setInverted(true);
+        frontLeft.setInverted(true);
+        backLeft.setInverted(true);
+        frontRight.setInverted(false);
+        backRight.setInverted(false);
 
         frontLeft.setNeutralMode(NeutralMode.Brake);
         backLeft.setNeutralMode(NeutralMode.Brake);
