@@ -15,4 +15,7 @@ public final class Constants {
 
     /* Controller port ID */
     public static final int CONTROLLER_ID = 0;  
+
+    public static final int LEFTSTICK_NUMBER = 0;
+    public static final int RIGHTSTICK_NUMBER = 0;
 }
