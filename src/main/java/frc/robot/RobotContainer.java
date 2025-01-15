@@ -31,4 +31,16 @@ public class RobotContainer {
     public Command getAutonomousCommand() {
         return Commands.print("No autonomous command configured");
     }
+
+    public static double getLeftJoystickXAxis() {
+        return controller.getLeftX();
+    }
+
+    public static double getLeftJoystickYAxis() {
+        return controller.getLeftY() * -1.0;    // reverse left joystick Y output, i guess we did this because the bot was going the wrong wasy ¯\_(ツ)_/¯
+    }
+
+    public static double getRightJoystickXAxis() {
+        return controller.getRightX();
+    }
 }
