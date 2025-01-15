@@ -12,4 +12,7 @@ public final class Constants {
     public static final int ID_TALON_FRONT_RIGHT = 4;
     public static final int ID_TALON_BACK_LEFT = 1;
     public static final int ID_TALON_BACK_RIGHT = 3;
+
+    /* Controller port ID */
+    public static final int CONTROLLER_ID = 0;  
 }
