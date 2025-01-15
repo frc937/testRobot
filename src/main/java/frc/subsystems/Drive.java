@@ -43,6 +43,10 @@ public class Drive extends SubsystemBase {
         mecanumDrive = new MecanumDrive(frontLeft, backLeft, frontRight, backRight);
     }
 
+    public void moveMecanum(double x, double y, double z) {
+        mecanumDrive.driveCartesian(x, y, z);
+    }
+
     @Override
     public void periodic() {
         // This method will be called once per scheduler run
