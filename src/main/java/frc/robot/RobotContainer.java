@@ -35,6 +35,10 @@ public class RobotContainer {
         return Commands.print("No autonomous command configured");
     }
 
+    public Command getDriveRobotOrientedCommand() {
+        return driveRO;
+    }
+
     public static double getLeftJoystickXAxis() {
         return controller.getLeftX();
     }
